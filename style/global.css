@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cor de fundo */
+  --bg-primary: #F4F5FB;
+  --bg-secondary: #FFFFFF;
+  
+  /* Cor de elemento */
+  --color-brand: #CA3884;
+  --color-brand-hover: #A52C6B;
+  --color-danger: #C93847;
+
+  /* Cor de conteudo */
+  --content-primary: #080B12;
+  --content-secondary: #374151;
+  --content-tertiary: #9CA3AF;
+  --always-white: #FFFFFF;
+
+  /* Cor de borda */
+  --border-primary: #D1D5DB;
+  --border-hover: #B9C2D0;
+
+  --font: "Inter", sans-serif;
+}
+
+html{
+  font: 400 1rem/1.5 var(--font);
+}
+
+h1 {
+  font: 700 1.5rem/2 var(--font);
+  color: var(--content-primary);
+}
+
+label {
+  font: 600 1rem/1.25 var(--font);
+  color: var(--always-white);
+}
+
+p {
+  font: 500 1rem/1.25 var(--font);
+}
+
