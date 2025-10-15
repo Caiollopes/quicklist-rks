@@ -1,15 +1,45 @@
-  .radio-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.radio-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
 
-    gap: .75rem
+  gap: .75rem;
+
+  position: relative;
+
+  & input,
+  & input:focus,
+  & input:hover {
+    all: unset;
+    position: absolute;
+    inset: 0;
   }
-  
-  .radio-image {
-    background: url(../assets/icons/alert.svg) center/contain;
-    
+
+  & .radio-image {
+    background: url(../assets/icons/radio-default.svg) center/contain;
+
+      
     width: 1rem;
     height: 1rem;
   }
+
+  &:hover, &:focus-within {
+    border: 2px solid var(--color-brand);
+
+    & .radio-image {
+      background-image: url(../assets/icons/radio-hover.svg);
+    }
+  }
+
+  &:has(:checked) {
+    border: 2px solid var(--color-brand);
+
+    & .radio-image {
+      background-image: url(../assets/icons/radio-selected.svg);
+    }
+  }
+}
+  
+  
 

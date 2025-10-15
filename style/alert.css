@@ -1,0 +1,13 @@
+/* Alerta */
+
+.alert{
+  background-color: var(--color-danger);
+  padding: 0.75rem;
+  border-radius: .75rem;
+
+  display: flex;
+
+  & label {
+    margin-right: auto;
+  }
+}

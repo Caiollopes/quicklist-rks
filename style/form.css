@@ -38,3 +38,7 @@ ul {
 a {
   display: flex;
 }
+
+.trash {
+  z-index: 1;
+}
