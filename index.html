@@ -25,7 +25,7 @@
         <div class="radio-image"></div>
           <input type="radio" name="produto">
           <p>Pão de forma</p>
-          <a href="" class="trash">
+          <a class="trash" onclick="closeAlert()">
             <img src="assets/icons/trash.svg" alt="">
           </a>  
       </li>
@@ -33,7 +33,7 @@
         <div class="radio-image"></div>
           <input type="radio" name="produto">
           <p>Café preto</p>
-          <a href="" class="trash">
+          <a class="trash" onclick="closeAlert()">
             <img src="assets/icons/trash.svg" alt="">
           </a>  
       </li>
@@ -41,7 +41,7 @@
         <div class="radio-image"></div>
           <input type="radio" name="produto">
           <p>Suco de laranja</p>
-          <a href="" class="trash">
+          <a class="trash" onclick="closeAlert()">
             <img src="assets/icons/trash.svg" alt="">
           </a>  
       </li>
@@ -49,18 +49,19 @@
         <div class="radio-image"></div>
           <input type="radio" name="produto">
           <p>Bolacha</p>
-          <a href="#" class="trash">
+          <a class="trash" onclick="closeAlert()">
             <img src="assets/icons/trash.svg" alt="">
           </a>
       </li>
     </ul>
-    <div class="alert">
+    <div id="alert" class="alert-close">
       <img src="./assets/icons/alert.svg" alt="">
       <label>O item foi removido da lista</label>
-      <a href="">
+      <a onclick="closeAlert()">
         <img src="assets/icons/close.svg" alt="">
       </a> 
     </div>
   </main>
+  <script src="./scripts/script.js"></script>
 </body>
 </html>
