@@ -16,48 +16,48 @@
       <a href="#">Voltar</a>
       <h1>Compras da semana</h1>
     </div>
-    <form action="">
-      <input type="text" placeholder="Adicione um novo item">
+    <div class="form">
+      <input class="input" type="text" placeholder="Adicione um novo item">
       <button class="button">Adicionar item</button>
-    </form>
-    <ul>
-      <li id="item-1" class="item radio-inner">
+    </div>
+    <ul class="list-products">
+      <li class="item radio-inner">
         <div class="radio-image"></div>
-          <input type="radio" name="produto">
+          <input type="radio" onclick="concluirTarefa(posicao)">
           <p>Pão de forma</p>
-          <a class="trash" onclick="closeAlert()">
+          <a class="trash" onclick="deletarItem()">
             <img src="assets/icons/trash.svg" alt="">
           </a>  
       </li>
-      <li id="item-2" class="item radio-inner">
+      <li class="item radio-inner">
         <div class="radio-image"></div>
-          <input type="radio" name="produto">
+          <input type="radio">
           <p>Café preto</p>
-          <a class="trash" onclick="closeAlert()">
+          <a class="trash" onclick="deletarItem()">
             <img src="assets/icons/trash.svg" alt="">
           </a>  
       </li>
-      <li id="item-3" class="item radio-inner">
+      <li class="item radio-inner">
         <div class="radio-image"></div>
-          <input type="radio" name="produto">
+          <input type="radio">
           <p>Suco de laranja</p>
-          <a class="trash" onclick="closeAlert()">
+          <a class="trash" onclick="deletarItem()">
             <img src="assets/icons/trash.svg" alt="">
           </a>  
       </li>
-      <li id="item-4" class="item radio-inner">
+      <li class="item radio-inner">
         <div class="radio-image"></div>
-          <input type="radio" name="produto">
+          <input type="radio">
           <p>Bolacha</p>
-          <a class="trash" onclick="closeAlert()">
+          <a class="trash" onclick="deletarItem()">
             <img src="assets/icons/trash.svg" alt="">
-          </a>
+          </a>  
       </li>
     </ul>
     <div id="alert" class="alert-close">
       <img src="./assets/icons/alert.svg" alt="">
       <label>O item foi removido da lista</label>
-      <a onclick="closeAlert()">
+      <a>
         <img src="assets/icons/close.svg" alt="">
       </a> 
     </div>

@@ -1,6 +1,6 @@
 /* Formulario */
 
-form {
+.form {
   min-width: 627px;
   display: flex;
 
@@ -12,8 +12,8 @@ form {
 ul {
   list-style: none;
 
-  /* overflow-y: scroll; */
-  /* max-height: 250px; */
+  overflow-y: scroll;
+  max-height: 250px;
 
   display: flex;
   flex-direction: column;
@@ -37,6 +37,8 @@ ul {
 
 a {
   display: flex;
+  z-index: 999;
+  cursor: pointer;
 }
 
 .trash {

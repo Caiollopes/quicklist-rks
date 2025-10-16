@@ -22,13 +22,13 @@ function mostrarTarefas() {
   
   let novaLi = ''
   
-  minhaListaDeItens.forEach((tarefa, index) => {
+  minhaListaDeItens.forEach(tarefa => {
     novaLi = novaLi + `
     <li class="item radio-inner">
     <div class="radio-image"></div>
     <input type="radio">
     <p>${tarefa}</p>
-    <a class="trash" onclick="deletarItem(${index})">
+    <a class="trash" onclick="closeAlert()">
     <img src="assets/icons/trash.svg" alt="">
     </a>  
     </li>
@@ -40,14 +40,6 @@ function mostrarTarefas() {
 }
 
 button.addEventListener('click', adicionarNovaTarefa)
-
-function deletarItem(index) {
-  minhaListaDeItens.splice(index, 1)
-
-  mostrarTarefas()
-}
-
-
 
 
 
