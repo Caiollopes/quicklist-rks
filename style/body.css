@@ -11,3 +11,7 @@ body {
 
   background-color: var(--bg-primary);
 }
+
+.list-products {
+  padding: 0 1rem;
+}

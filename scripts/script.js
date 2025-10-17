@@ -1,6 +1,7 @@
 const button = document.querySelector(".button")
 const input = document.querySelector(".input")
 const listaCompleta = document.querySelector("ul")
+const alert = document.getElementById("alert")
 
 let minhaListaDeItens = ["Pão de forma", "Café preto", "Suco de laranja", "Bolacha"]
 
@@ -42,10 +43,23 @@ function mostrarTarefas() {
 button.addEventListener('click', adicionarNovaTarefa)
 
 function deletarItem(index) {
+  
   minhaListaDeItens.splice(index, 1)
-
+  
+  
   mostrarTarefas()
+  alertDelete()
 }
+
+function alertDelete() {
+  alert.classList.remove("alert-close")
+}
+
+function closeAlert() {
+  alert.classList.add("alert-close")
+}
+
+
 
 
 

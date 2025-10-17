@@ -11,14 +11,13 @@
     margin-inline: .5rem auto;
   }
 
-  &.alert-close {
-    display: none;
-  }
-
   & a {
     cursor: pointer;
   }
+  
+  &.alert-close {
+    display: none;
+  }
 }
-
 
 
