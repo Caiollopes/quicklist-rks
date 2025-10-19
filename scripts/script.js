@@ -5,12 +5,13 @@ const alert = document.getElementById("alert")
 
 let minhaListaDeItens = ["Pão de forma", "Café preto", "Suco de laranja", "Bolacha"]
 
+// Adicionando novo item.
 function adicionarNovaTarefa(){
 if (input.value === "") {
   alert("Não pode adicionar um campo vazio!")
 
 } else {
-  minhaListaDeItens.push(input.value)
+  minhaListaDeItens.unshift(input.value)
   
   input.value = ""
 
@@ -19,6 +20,7 @@ if (input.value === "") {
 
 }
 
+// Mostrar novo item adicionado.
 function mostrarTarefas() {
   
   let novaLi = ''
@@ -40,7 +42,10 @@ function mostrarTarefas() {
    
 }
 
+// Pegando a ação do botao "Adicionar item".
 button.addEventListener('click', adicionarNovaTarefa)
+
+// Deletar Item da Lista.
 
 function deletarItem(index) {
   
@@ -51,10 +56,12 @@ function deletarItem(index) {
   alertDelete()
 }
 
+// Aparecer o alerta na hora que exclui.
 function alertDelete() {
   alert.classList.remove("alert-close")
 }
 
+// Fechar o alerta ao clicar no X.
 function closeAlert() {
   alert.classList.add("alert-close")
 }
