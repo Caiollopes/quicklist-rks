@@ -13,7 +13,7 @@ let minhaListaDeItens = [
 // Adicionando novo item.
 function adicionarNovaTarefa() {
   if (input.value === "") {
-    alert("Não pode adicionar um campo vazio!")
+    window.alert("Não pode adicionar um campo vazio!")
   } else {
     minhaListaDeItens.unshift(input.value)
 
@@ -68,7 +68,7 @@ function closeAlert() {
 }
 
 // Função de selecionar item
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function tabom() {
   // Seleciona dos os itens que possui a classe radio-inner
   const itens = document.querySelectorAll(".radio-inner")
   const classeSelecionada = "is-selected" // Cria um const com uma classe de estado
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Se caso estiver selecionado, ele desseleciona (tirando a classe)
         this.classList.remove(classeSelecionada)
       } else {
-        // Adiciona a classe no item clicado.
+        // Adiciona a classe no item
         item.classList.add(classeSelecionada)
       }
     })
