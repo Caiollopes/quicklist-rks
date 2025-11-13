@@ -1,43 +1,15 @@
 main {
   display: flex;
   flex-direction: column;
-
   gap: 2.5rem;
 }
 
-
-/* Campo de entrada */
-
-input {
-  flex: 1;
-  width: 451px;
-  height: 44px;
-  border-radius: .75rem;
-  border: 2px solid var(--border-primary);
-  background-color: var(--bg-secondary);
-  padding: 1rem;
-
-  &:focus {
-    outline: 0;
-    border-color: var(--color-brand);
-  }
-
-  &:hover {
-    border-color: var(--border-hover);
-  }
+img {
+  max-width: 100%;
 }
 
-/* Botao */
-
-.button {
-  width: 160px;
-  height: 44px;
-  background-color: var(--color-brand);
-  border-radius: .75rem;
-  border-style: none;
-  color: var(--always-white);
-
-  &:hover {
-    background-color: var(--color-brand-hover);
-  }
+@media (max-width: 1000px) {
+  /* main {
+    width: 300px;
+  } */
 }

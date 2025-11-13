@@ -1,67 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-  <title>QuickList</title>
-</head>
-<body>
-  <img src="assets/icons/logo.svg" alt="">
-  <main>
-    <div>
-      <a href="#">Voltar</a>
-      <h1>Compras da semana</h1>
-    </div>
-    <div class="form">
-      <input class="input" type="text" placeholder="Adicione um novo item">
-      <button class="button">Adicionar item</button>
-    </div>
-    <ul class="list-products">
-      <li class="item radio-inner">
-        <div class="radio-image"></div>
-          <input type="radio" onclick="concluirTarefa(posicao)">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>QuickList</title>
+  </head>
+  <body>
+    <img src="assets/icons/logo.svg" alt="" />
+    <main>
+      <div>
+        <a class="voltar" href="#">Voltar</a>
+        <h1>Compras da semana</h1>
+      </div>
+      <div class="form">
+        <input class="input" type="text" placeholder="Adicione um novo item" />
+        <button class="button">Adicionar item</button>
+      </div>
+      <ul class="list-products">
+        <li class="item radio-inner">
+          <div class="radio-image"></div>
+          <input type="radio" onclick="concluirTarefa(posicao)" />
           <p>Pão de forma</p>
           <a class="trash" onclick="deletarItem()">
-            <img src="assets/icons/trash.svg" alt="">
-          </a>  
-      </li>
-      <li class="item radio-inner">
-        <div class="radio-image"></div>
-          <input type="radio">
+            <img src="assets/icons/trash.svg" alt="" />
+          </a>
+        </li>
+        <li class="item radio-inner">
+          <div class="radio-image"></div>
+          <input type="radio" />
           <p>Café preto</p>
           <a class="trash" onclick="deletarItem()">
-            <img src="assets/icons/trash.svg" alt="">
-          </a>  
-      </li>
-      <li class="item radio-inner">
-        <div class="radio-image"></div>
-          <input type="radio">
+            <img src="assets/icons/trash.svg" alt="" />
+          </a>
+        </li>
+        <li class="item radio-inner">
+          <div class="radio-image"></div>
+          <input type="radio" />
           <p>Suco de laranja</p>
           <a class="trash" onclick="deletarItem()">
-            <img src="assets/icons/trash.svg" alt="">
-          </a>  
-      </li>
-      <li class="item radio-inner">
-        <div class="radio-image"></div>
-          <input type="radio">
+            <img src="assets/icons/trash.svg" alt="" />
+          </a>
+        </li>
+        <li class="item radio-inner">
+          <div class="radio-image"></div>
+          <input type="radio" />
           <p>Bolacha</p>
           <a class="trash" onclick="deletarItem()">
-            <img src="assets/icons/trash.svg" alt="">
-          </a>  
-      </li>
-    </ul>
-    <div id="alert" class="alert-close">
-      <img src="./assets/icons/alert.svg" alt="">
-      <label>O item foi removido da lista</label>
-      <a onclick="closeAlert()">
-        <img src="assets/icons/close.svg" alt="">
-      </a> 
-    </div>
-  </main>
-  <script src="./scripts/script.js"></script>
-</body>
+            <img src="assets/icons/trash.svg" alt="" />
+          </a>
+        </li>
+      </ul>
+      <div id="alert" class="alert-close">
+        <img src="./assets/icons/alert.svg" alt="" />
+        <label>O item foi removido da lista</label>
+        <a onclick="closeAlert()">
+          <img src="assets/icons/close.svg" alt="" />
+        </a>
+      </div>
+    </main>
+    <script src="./scripts/script.js"></script>
+  </body>
 </html>

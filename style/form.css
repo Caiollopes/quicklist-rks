@@ -1,10 +1,45 @@
 /* Formulario */
 
 .form {
-  min-width: 627px;
+  width: 627px;
   display: flex;
-
   gap: 1rem;
+}
+
+/* Campo de entrada */
+
+input {
+  flex: 1;
+  width: 451px;
+  height: 44px;
+  border-radius: 0.75rem;
+  border: 2px solid var(--border-primary);
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+
+  &:focus {
+    outline: 0;
+    border-color: var(--color-brand);
+  }
+
+  &:hover {
+    border-color: var(--border-hover);
+  }
+}
+
+/* Botao */
+
+.button {
+  width: 160px;
+  height: 44px;
+  background-color: var(--color-brand);
+  border-radius: 0.75rem;
+  border-style: none;
+  color: var(--always-white);
+
+  &:hover {
+    background-color: var(--color-brand-hover);
+  }
 }
 
 /* Lista */
@@ -24,9 +59,9 @@ ul {
 .item {
   color: var(--content-secondary);
   background-color: var(--bg-secondary);
-  
+
   padding: 1.1rem;
-  border-radius: .75rem;
+  border-radius: 0.75rem;
 
   display: flex;
 }
@@ -43,4 +78,19 @@ a {
 
 .trash {
   z-index: 1;
+}
+
+@media (max-width: 1000px) {
+  .form {
+    width: 300px;
+    flex-direction: column;
+
+    & input {
+      width: 300px;
+    }
+  }
+
+  .button {
+    width: 100%;
+  }
 }
