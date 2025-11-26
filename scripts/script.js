@@ -15,10 +15,13 @@ function adicionarNovaTarefa() {
   if (input.value === "") {
     window.alert("Não pode adicionar um campo vazio!")
   } else {
+    // unshift - adiciona um nov item no começo do array
     minhaListaDeItens.unshift(input.value)
 
+    // limpa o input para uma nova inserção
     input.value = ""
 
+    // Executa a função para mostrar a lista atualizada
     mostrarTarefas()
   }
 }
@@ -28,7 +31,7 @@ function mostrarTarefas() {
   let novaLi = ""
 
   minhaListaDeItens.forEach((tarefa, index) => {
-    novaLi =
+    novaLi +=
       novaLi +
       `
     <li class="item radio-inner">
@@ -37,11 +40,12 @@ function mostrarTarefas() {
     <p>${tarefa}</p>
     <a class="trash" onclick="deletarItem(${index})">
     <img src="assets/icons/trash.svg" alt="">
-    </a>  
+    </a>
     </li>
     `
   })
 
+  // Insere um novo li na ul
   listaCompleta.innerHTML = novaLi
 }
 
@@ -49,11 +53,14 @@ function mostrarTarefas() {
 button.addEventListener("click", adicionarNovaTarefa)
 
 // Deletar Item da Lista.
-
+// splice - vai remover o item do array
 function deletarItem(index) {
   minhaListaDeItens.splice(index, 1)
 
+  // Vai atualizar a lista
   mostrarTarefas()
+
+  //Vai alertar que um produto foi removido
   alertDelete()
 }
 
@@ -69,11 +76,10 @@ function closeAlert() {
 
 // Função de selecionar item
 document.addEventListener("DOMContentLoaded", function tabom() {
-  // Seleciona dos os itens que possui a classe radio-inner
-  const itens = document.querySelectorAll(".radio-inner")
-  const classeSelecionada = "is-selected" // Cria um const com uma classe de estado
+  const itens = document.querySelectorAll(".radio-inner") // Selecionado todos itens da lista
+  const classeSelecionada = "is-selected" // Classe selecionada
 
-  // Percorre todos os item da lista e monitoriando o evento de click em alguma delas.
+  // Percorre todos os item da lista e monitorando o evento de click em algum produto.
   itens.forEach((item) => {
     item.addEventListener("click", function () {
       // Verifica se o item clicado ja esta selecionado (se contem a classe)
